@@ -1,2 +1,9 @@
-# onto-security-checks
-OWL Security Ontologies for DVWA and PMS - Onto-Security Checks
+onto-security-checks/
+│
+├── README.md
+├── ontologies/
+│   ├── dvwa_ontology.owl
+│   └── pms_ontology.owl
+└── sparql/
+    ├── dvwa_queries.sparql
+    └── pms_queries.sparql
