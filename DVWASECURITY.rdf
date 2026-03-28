@@ -1,0 +1,2083 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/"
+     xml:base="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:dvwaontologie="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasscope -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasscope">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#isMitigated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#isMitigated">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Administrative_Countermeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Administrative_Countermeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#HighCM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#HighCM">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                        <owl:hasValue>high</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                        <owl:hasValue>high</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Procedural_Countermeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Procedural_Countermeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Access_Control -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Access_Control">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Attack"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileTypeFiltering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Admin_User -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Admin_User">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Apache_Server -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Apache_Server">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Weak_Session"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AuditLogging"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Apache_Server"/>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_CSFR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_CSFR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_Cmd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_Cmd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_File -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_File">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_SQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_SQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_SQLModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_Session -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker_Session">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AuditLogging -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AuditLogging">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Procedural_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover"/>
+        <dvwaontologie:hasEffectiveness>medium</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Monitoring</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRFToken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRFToken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:mitigatesVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Vuln"/>
+        <dvwaontologie:hasEffectiveness>high</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Session_Management</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Threat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Vuln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Vuln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:impacts rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection_Threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection_Threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection_Threat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#ContentSecurityPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#ContentSecurityPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Attack"/>
+        <dvwaontologie:hasEffectiveness>high</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasEffectiveness>medium</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Web_Interface</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_SQLModule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_SQLModule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasRisk rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasRisk rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:hasRisk rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:hasRisk rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRF_Vuln"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Command_Injection"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Vuln"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Weak_Session"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Stored"/>
+        <dvwaontologie:impacts rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Access_Control"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AuditLogging"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#CSRFToken"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#ContentSecurityPolicy"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#InputValidation"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#MultiFactorAuthentication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DatabaseEncryption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DatabaseEncryption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQL_Injection_Threat"/>
+        <dvwaontologie:hasEffectiveness>veryhigh</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Data_Layer</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:isMitigated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dvwaontologie:isMitigated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileTypeFiltering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileTypeFiltering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover"/>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Threat"/>
+        <dvwaontologie:mitigatesVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Vuln"/>
+        <dvwaontologie:protectedby rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DatabaseEncryption"/>
+        <dvwaontologie:hasEffectiveness>high</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Upload_Module</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Vuln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#FileUpload_Vuln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#InputValidation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#InputValidation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:mitigatesVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln"/>
+        <dvwaontologie:mitigatesVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Vuln"/>
+        <dvwaontologie:hasEffectiveness>medium</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Application_Layer</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#MultiFactorAuthentication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#MultiFactorAuthentication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Technical_Countermeasure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:mitigates rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQL_Injection_Threat"/>
+        <dvwaontologie:hasEffectiveness>hasEffectiveness</dvwaontologie:hasEffectiveness>
+        <dvwaontologie:hasscope>Authentication_Layer</dvwaontologie:hasscope>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#MySQL_DB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#MySQL_DB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasRisk rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+        <dvwaontologie:hasVulnerability rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln"/>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Attacker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:impacts rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Database_Compromise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQL_Injection_Threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQL_Injection_Threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:exploits rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SQLInjection_Vuln"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SessionHijack_Threat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#SessionHijack_Threat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:exploits rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Weak_Session"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+        <dvwaontologie:isMitigated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dvwaontologie:isMitigated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:Reduces rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#System_Takeover"/>
+        <dvwaontologie:isMitigated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dvwaontologie:isMitigated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Test_User -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Test_User">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasaccessto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#user"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:hasaccessto rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#DVWA_WebApp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Weak_Session -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Weak_Session">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Attack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:exploits rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Stored"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Stored -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Stored">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+        <dvwaontologie:impacts rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Session_Hijacking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Vuln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#XSS_Vuln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#HighCM"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasEffectiveness"/>
+                <owl:hasValue>high</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>R4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatesVulnerability"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#mitigatedrisk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>R3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#contermeasure"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#protectedby"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#Reduces"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/c"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#isMitigated"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>R1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#threat"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#exploits"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/t"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#vulnerability"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#impacts"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasVulnerability"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/v"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>R5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#AtRiskSystem"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>R2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#system"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#hasRisk"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie#risk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/quicktech/ontologies/2025/10/dvwaontologie/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
