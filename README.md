@@ -213,7 +213,6 @@ SELECT ?system (COUNT(?countermeasure) AS ?count) WHERE {
 > Meradi C., Aouag S., Beloucif A. (2025).
 > *Onto-Security Checks: An Ontology-Based Reasoning Approach
 > for Automated Security Verification in Software Architectures.*
-> Preprint submitted to Elsevier.
 
 ---
 
